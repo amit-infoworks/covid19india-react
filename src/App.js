@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import * as Icon from 'react-feather';
 
-import './App.scss';
+import './style/App.scss';
+import './style/darktheme.scss';
 import Home from './components/home';
 import Navbar from './components/navbar';
 import Links from './components/links';
@@ -19,7 +20,7 @@ function App() {
 
       <Router history={history}>
         <Route render={({location}) => (
-          <div className="Almighty-Router">
+          <div className="Almighty-Router dark-theme" >
             <Navbar />
             <Banner />
             <Route exact path="/" render={() => <Redirect to="/" />} />

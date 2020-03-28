@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ToggleButton from "./toggle";
 
 function Navbar(props) {
   const [view, setView] = useState("Home");
+  const [darkMode, setDarkMode] = useState(false);
 
   if (window.location.pathname !== "/summary") {
     return (
@@ -39,12 +41,6 @@ function Navbar(props) {
               Home
             </span>
           </Link>
-
-          {/* <Link to="/updates" onClick={()=>{
-            setView('Updates');
-          }}>
-            <span className={`fadeInUp ${view==='Updates' ? 'focused' : ''}`} style={{animationDelay: '0.2s'}}>Updates</span>
-          </Link>*/}
 
           <Link
             to="/clusters"
@@ -91,7 +87,9 @@ function Navbar(props) {
           </Link>
         </div>
 
-        <div className="navbar-right"></div>
+        <div className="navbar-right">
+          <ToggleButton setValue={setDarkMode} value={darkMode} />
+        </div>
       </div>
     );
   } else {
