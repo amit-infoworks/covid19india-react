@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ToggleButton from "./toggle";
+import PropTypes from "prop-types";
+
+Navbar.propTypes = {
+  darkMode: PropTypes.bool,
+  setDarkMode: PropTypes.func,
+};
 
 function Navbar(props) {
+  const { darkMode, setDarkMode } = props;
   const [view, setView] = useState("Home");
-  const [darkMode, setDarkMode] = useState(false);
 
   if (window.location.pathname !== "/summary") {
     return (
@@ -18,7 +24,7 @@ function Navbar(props) {
       >
         <img
           className="fadeInUp"
-          src="/icon.png"
+          src={darkMode ? "/icon-dark.png" : "/icon.png"}
           style={{
             animationDelay: "0.0s",
             width: view === "Clusters" ? "1.5rem" : "",

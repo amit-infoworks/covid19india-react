@@ -968,7 +968,7 @@ table {
 footer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
   justify-content: center;
   margin-top: 5rem;
   & > * {
@@ -1260,9 +1260,7 @@ footer {
 }
 
 .switch-container {
-  margin-top: 20px;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
+  padding-right: 30px;
 
   input[type="checkbox"].switch {
     opacity: 0;
@@ -1273,7 +1271,7 @@ footer {
     width: 40px;
     height: 20px;
     border-radius: 999px;
-    background-color: #00b0f2;
+    background-color: $dark;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     -webkit-transition-property: background-color, box-shadow;
@@ -1296,24 +1294,24 @@ footer {
   }
 
   input[type="checkbox"].switch:checked + div {
-    width: 94px;
+    width: 76px;
     background-position: 0 0;
-    background-color: #3b89ec;
+    background-color: $dark;
   }
 
   input[type="checkbox"].switch + div {
-    width: 94px;
-    height: 48px;
+    width: 76px;
+    height: 30px;
   }
 
   input[type="checkbox"].switch:checked + div {
-    background-color: #57bb00;
+    background-color: $gray;
   }
 
   input[type="checkbox"].switch + div > div {
     float: left;
-    width: 46px;
-    height: 46px;
+    width: 28px;
+    height: 28px;
     border-radius: inherit;
     background: #ffffff;
     -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
@@ -1330,12 +1328,12 @@ footer {
   input[type="checkbox"].switch:checked + div > div {
     -webkit-transform: translate3d(20px, 0, 0);
     transform: translate3d(20px, 0, 0);
-    background-color: #ffffff;
+    background-color: $dark;
   }
 
   input[type="checkbox"].bigswitch.switch + div > div {
-    width: 44px;
-    height: 44px;
+    width: 28px;
+    height: 28px;
     margin-top: 1px;
   }
 

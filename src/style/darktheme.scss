@@ -52,7 +52,12 @@ $purple-hover: #201aa230;
 $purple-mid: #201aa299;
 $purple-light-opaque: #e3e2f3;
 $dark-1: #121212;
-$dark-2: #1b262c;
+$dark-2: #272727;
+$color-1: #84c9fb;
+$white-1: #ffffff;
+$row-even: #212529;
+$row-odd: #2C3034;
+$table-1: #1f2739;
 
 .dark-theme {
   background-color: $dark-1;
@@ -94,11 +99,11 @@ $dark-2: #1b262c;
     font-family: "Archia";
     font-size: 0.8rem;
     font-weight: 600;
-    color: $purple;
-    background: $gray-light;
+    color: $white-1;
+    background: $color-1;
     .snippet {
       align-self: center;
-      width: calc(100%-10rem);
+      width: calc(100% - 10rem);
       word-wrap: break-word;
       padding: 1.5rem;
       text-align: center;
@@ -244,7 +249,7 @@ $dark-2: #1b262c;
 
   .telegram {
     width: 15.5rem;
-    background: $gray-light !important;
+    background: $white-1 !important;
     color: #0088cc !important;
     padding-left: 0.65rem;
     &:hover {
@@ -352,8 +357,8 @@ $dark-2: #1b262c;
     margin-bottom: 1rem;
     margin-top: 2rem;
     thead {
-      background: $gray-light;
-      color: $gray-dark;
+      background: $row-even;
+      color: $white-1;
       text-align: left;
       font-size: 0.75rem;
       th {
@@ -382,16 +387,16 @@ $dark-2: #1b262c;
             align-self: center;
             margin-top: -0.35rem;
             margin-left: 0.25rem;
-            color: $gray-mid;
+            color: $white-1;
           }
         }
       }
     }
     &:nth-child(odd) {
-      background-color: $light;
+      background-color: $row-odd;
     }
     tbody {
-      color: $gray;
+      color: $white-1;
       tr {
         transition: background 0.1s ease-in-out;
         cursor: pointer;
@@ -408,17 +413,17 @@ $dark-2: #1b262c;
         }
       }
       & > tr:nth-child(odd) {
-        background: $light;
+        background: $row-odd;
         &:hover {
           background: $gray-hover;
         }
         &:nth-child(odd) {
-          background: $white !important;
+          background: $row-odd !important;
         }
       }
 
       &:nth-child(odd) {
-        background-color: $light;
+        background-color: $row-odd;
         &.spacer {
           background: transparent !important;
         }
@@ -446,13 +451,13 @@ $dark-2: #1b262c;
       }
       .district-heading {
         transform: translateX(1rem);
-        background: $gray-light;
+        background: $row-even;
         td {
           font-size: 0.75rem;
           font-weight: 900;
           padding: 0.45rem;
-          color: $gray-dark;
-          background: $gray-light;
+          color: $white-1;
+          background: $row-even;
         }
       }
       max-width: 10rem;
@@ -469,13 +474,13 @@ $dark-2: #1b262c;
     }
     .is-total {
       td {
-        background: $gray-hover;
+        background: $row-even;
       }
     }
     .dropdown {
       position: absolute;
       left: -0.75rem;
-      background: $gray-light;
+      background: $row-even;
       border-radius: 50%;
       width: 13px;
       height: 13px;
@@ -505,7 +510,7 @@ $dark-2: #1b262c;
     .header {
       position: absolute;
       top: -5rem;
-      color: $gray-dark;
+      color: $white-1;
     }
     h6.header {
       margin-top: 3rem;
@@ -634,7 +639,7 @@ $dark-2: #1b262c;
 
   .timeseries-header {
     h1 {
-      color: $gray-dark;
+      color: $white-1;
       margin: 0;
       margin-bottom: 0.5rem;
     }
@@ -835,7 +840,7 @@ $dark-2: #1b262c;
   footer {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
     justify-content: center;
     margin-top: 5rem;
     & > * {
@@ -934,7 +939,7 @@ $dark-2: #1b262c;
     }
     .question {
       margin-bottom: 0.5rem;
-      color: $gray-dark;
+      color: $white-1;
     }
     .answer {
       color: $blue;
@@ -1125,93 +1130,6 @@ $dark-2: #1b262c;
       margin-left: 8px;
     }
   }
-
-  .switch-container {
-    margin-top: 20px;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-
-    input[type="checkbox"].switch {
-      opacity: 0;
-    }
-
-    input[type="checkbox"].switch + div {
-      vertical-align: middle;
-      width: 40px;
-      height: 20px;
-      border-radius: 999px;
-      background-color: #00b0f2;
-      -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      -webkit-transition-property: background-color, box-shadow;
-      transition-property: background-color, box-shadow;
-      cursor: pointer;
-    }
-
-    input[type="checkbox"].switch + div span {
-      font-size: 1.6rem;
-      color: white;
-      margin-top: 12px;
-    }
-
-    input[type="checkbox"].switch + div span:nth-child(1) {
-      margin-left: 15px;
-    }
-
-    input[type="checkbox"].switch + div span:nth-child(2) {
-      margin-left: 55px;
-    }
-
-    input[type="checkbox"].switch:checked + div {
-      width: 94px;
-      background-position: 0 0;
-      background-color: #3b89ec;
-    }
-
-    input[type="checkbox"].switch + div {
-      width: 94px;
-      height: 48px;
-    }
-
-    input[type="checkbox"].switch:checked + div {
-      background-color: #57bb00;
-    }
-
-    input[type="checkbox"].switch + div > div {
-      float: left;
-      width: 46px;
-      height: 46px;
-      border-radius: inherit;
-      background: #ffffff;
-      -webkit-transition-timing-function: cubic-bezier(1, 0, 0, 1);
-      transition-timing-function: cubic-bezier(1, 0, 0, 1);
-      -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      -webkit-transition-property: transform, background-color;
-      transition-property: transform, background-color;
-      pointer-events: none;
-      margin-top: 1px;
-      margin-left: 1px;
-    }
-
-    input[type="checkbox"].switch:checked + div > div {
-      -webkit-transform: translate3d(20px, 0, 0);
-      transform: translate3d(20px, 0, 0);
-      background-color: #ffffff;
-    }
-
-    input[type="checkbox"].bigswitch.switch + div > div {
-      width: 44px;
-      height: 44px;
-      margin-top: 1px;
-    }
-
-    input[type="checkbox"].switch:checked + div > div {
-      -webkit-transform: translate3d(46px, 0, 0);
-      transform: translate3d(46px, 0, 0);
-    }
-  }
-
 
 }
 
